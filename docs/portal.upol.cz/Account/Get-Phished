@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Phished</title>
+  <style>
+    body {
+      background-color: black;
+      color: limegreen;
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin: 20px;
+    }
+
+    p {
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    img {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>GET PHISHED!</h1>
+  <p>You're about to fall for it!</p>
+  <span id="username"></span>
+  <span id="password"></span>
+  <div class="tenor-gif-embed" data-postid="3057228474552902029" data-share-method="host" data-aspect-ratio="0.566845"
+    data-width="100%"><a href="https://tenor.com/view/good-morning-gif-3057228474552902029">Good Morning GIF</a>from <a
+      href="https://tenor.com/search/good+morning-gifs">Good Morning GIFs</a></div>
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</body>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const username = urlParams.get('j_username');
+  const password = urlParams.get('j_password');
+  document.getElementById('username').innerText = `Username: ${username}`;
+  document.getElementById('password').innerText = `Password: ${password}`;
+</script>
+
+</html>
